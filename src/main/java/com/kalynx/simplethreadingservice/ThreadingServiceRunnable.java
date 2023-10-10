@@ -10,13 +10,13 @@ class ThreadingServiceRunnable<T> implements Runnable {
     private final ThreadService<T> service;
     private Future<?> future;
 
-    public ThreadingServiceRunnable(Supplier<T> runnableSupplier, Predicate<T> conditionalCheck, ThreadService<T> service) {
+    ThreadingServiceRunnable(Supplier<T> runnableSupplier, Predicate<T> conditionalCheck, ThreadService<T> service) {
         this.runnableSupplier = runnableSupplier;
         this.conditionalCheck = conditionalCheck;
         this.service = service;
     }
 
-    public void setFuture(Future<?> future) {
+    void setFuture(Future<?> future) {
         this.future = future;
     }
 

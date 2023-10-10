@@ -6,6 +6,10 @@ import java.util.concurrent.*;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/**
+ * Provides a simple threading server for handling computationally heavy events.
+ * @param <T> The type of the object to compute against.
+ */
 public class ThreadService<T> {
     // Thread used to handle the timing and delegation to the worker thread.
     final ScheduledExecutorService timerService = Executors.newSingleThreadScheduledExecutor();

@@ -3,7 +3,7 @@ package com.kalynx.simplethreadingservice;
 import java.time.Duration;
 import java.util.function.Supplier;
 
-class Runner<T> {
+public class Runner<T> {
     private final ThreadService<T> service;
 
     Runner(ThreadService<T> service, Supplier<T> runnable) {
